@@ -52,4 +52,4 @@ document.getElementsByTagName("body")[0].appendChild(style)
 ## Setup Jupyter's Configuration File
 Add the following line to jupyter's config file, located at `/home/jovyan/.jupyter/jupyter_notebook_config.py` 
 ###### There should be a better way to do this without downloading cytoscapes js into docker!
-c.NotebookApp.extra_static_paths = ["/home/jovyan/.js_files"]
+`c.NotebookApp.extra_static_paths = ["/home/jovyan/.js_files"]`
