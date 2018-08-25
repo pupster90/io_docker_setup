@@ -27,7 +27,7 @@ Here we install python packages that are used in io
 1. `pip install ndex2-dev`
 2. `pip install PyGithub`
 
-# Inside Docker: Configure Jupyter
+# 3 Inside Docker: Configure Jupyter
 
 * A lot of extra code has to be written because I couldn't figure out how to pull the cytoscape.js file directly in jupyter. **There should be a better way to do this without downloading cytoscape's js into the docker!**
 
