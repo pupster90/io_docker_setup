@@ -25,7 +25,7 @@ Here we install python packages that are used in io
 
 ## Setup custom.js file
 create a new file called `custom.js` at `home/jovyan/.jupyter/custom/custom.js` and add the following lines to it
-
+```javascript
 // Change Text Editor View 
 if( document.getElementById("texteditor-container") != null ){
 document.getElementById("texteditor-container").className = "container-fluid"
@@ -43,5 +43,5 @@ document.getElementsByClassName("terminado-container-container")[0].style.paddin
 var style = document.createElement("style"); 
 style.innerHTML = "body {-webkit-overflow-scrolling: touch;}"
 document.getElementsByTagName("body")[0].appendChild(style)
-
+```
 
