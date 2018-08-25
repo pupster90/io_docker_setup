@@ -26,6 +26,11 @@ Here we install python packages that are used in io
 ## Setup custom.js file
 create a new file called `custom.js` at `home/jovyan/.jupyter/custom/custom.js` and add the following lines to it
 ```javascript
+// Load in Cytcoscape: There should be a better way to do this!
+requirejs.config({ paths: {
+  cytoscape: 'cytoscape.min'
+} });
+
 // Change Text Editor View 
 if( document.getElementById("texteditor-container") != null ){
 document.getElementById("texteditor-container").className = "container-fluid"
@@ -44,4 +49,7 @@ var style = document.createElement("style");
 style.innerHTML = "body {-webkit-overflow-scrolling: touch;}"
 document.getElementsByTagName("body")[0].appendChild(style)
 ```
-
+## Setup Jupyter's Configuration File
+Add the following line to jupyter's config file, located at `/home/jovyan/.jupyter/jupyter_notebook_config.py` 
+: There should be a better way to do this without downloading cytoscapes js into docker! 
+c.NotebookApp.extra_static_paths = ["/home/jovyan/.js_files"]
