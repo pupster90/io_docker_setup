@@ -9,7 +9,7 @@ I build my docker image off of whatever is hte latest jupyter datascience docker
 3. `docker run -it -p 8888:8888 --name io jupyter/datascience-notebook /bin/bash`
 
 
-# Commands to run Inside Docker
+# 2: Run Commands Inside Docker
 After running the last line in the terminal u should now be inside the docker container. From here we get to work creating the image that we want.
 
 ## Install [NB-Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
@@ -21,4 +21,7 @@ We install nbextensions. Then we run jupyter on the docker so that we can custom
 ## Install Packages
 Here we install python packages that are used in io
 1. `pip install ndex2-dev`
-2. 
+2. `pip install PyGithub`
+
+## Setup Files
+
