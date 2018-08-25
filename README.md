@@ -1,6 +1,10 @@
 # Docker Setup for IO
 This file explains hows I setup the docker file for IO. *Please Note* this is meant to be used as a reference for later adaptations, just running lines line by line won't work.
 
+**Notes about First Setup**
+* A lot of extra code has to be written because I couldn't figure out how to pull the cytoscape.js file directly in jupyter. That's somethign that should be fixd.
+
+
 # 1: Get Base Docker
 I build my docker image off of whatever is hte latest jupyter datascience docker: [jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook/). I then access the docker interactively and setup my docker container. These are the steps to start running the interacitve docker container.
 
@@ -9,7 +13,7 @@ I build my docker image off of whatever is hte latest jupyter datascience docker
 3. `docker run -it -p 8888:8888 --name io jupyter/datascience-notebook /bin/bash`
 
 
-# 2: Run Commands Inside Docker
+# 2: Inside Docker: Install Stuff
 After running the last line in the terminal u should now be inside the docker container. From here we get to work creating the image that we want.
 
 ## Install [NB-Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
@@ -22,6 +26,18 @@ We install nbextensions. Then we run jupyter on the docker so that we can custom
 Here we install python packages that are used in io
 1. `pip install ndex2-dev`
 2. `pip install PyGithub`
+
+# Inside Docker: Configure Jupyter
+
+* A lot of extra code has to be written because I couldn't figure out how to pull the cytoscape.js file directly in jupyter. **There should be a better way to do this without downloading cytoscape's js into the docker!**
+
+## Setup Location for JS Files
+Create the folder `/home/jovyan/.js_files` go into that folder and then run the following command ot download javascript for cytoscape with this command:
+`some command`
+
+## Setup Jupyter's Configuration File
+Add the following line to jupyter's config file, located at `/home/jovyan/.jupyter/jupyter_notebook_config.py` 
+`c.NotebookApp.extra_static_paths = ["/home/jovyan/.js_files"]`
 
 ## Setup custom.js file
 create a new file called `custom.js` at `home/jovyan/.jupyter/custom/custom.js` and add the following lines to it
@@ -49,7 +65,5 @@ var style = document.createElement("style");
 style.innerHTML = "body {-webkit-overflow-scrolling: touch;}"
 document.getElementsByTagName("body")[0].appendChild(style)
 ```
-## Setup Jupyter's Configuration File
-Add the following line to jupyter's config file, located at `/home/jovyan/.jupyter/jupyter_notebook_config.py` 
-###### There should be a better way to do this without downloading cytoscapes js into docker!
-`c.NotebookApp.extra_static_paths = ["/home/jovyan/.js_files"]`
+
+
