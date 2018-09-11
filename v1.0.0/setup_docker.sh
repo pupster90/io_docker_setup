@@ -28,7 +28,9 @@ pip install timeago
 # Setup hidden files
 mkdir ~/.js_files && cd ~/.js_files && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/cytoscape.min.js
 mkdir ~/.jupyter/custom && cd ~/.jupyter/custom && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/custom.js
-echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" > ~/.jupyter/jupyter_notebook_config.py
+rm -rf work
+rm -rf setup_docker.sh
 
 
 
