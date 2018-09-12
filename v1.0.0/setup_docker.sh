@@ -26,6 +26,7 @@ pip install PyGithub
 pip install timeago
 
 # Setup hidden files
+cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Set_Password.py
 mkdir ~/.js_files && cd ~/.js_files && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/cytoscape.min.js
 mkdir ~/.jupyter/custom && cd ~/.jupyter/custom && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/custom.js
 
@@ -38,6 +39,15 @@ echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" > ~/.jupyte
 
 # Clean up
 rm -rf ~/work ~/setup_docker.sh
+
+
+
+# Function called when Docker is built:
+Password () {
+   cd ~/ && python Set_Password.py $1
+   rm -rf Set_Password.py
+   start-notebook.sh
+}
 
 
 
