@@ -43,12 +43,13 @@ cd ~ && git clone https://github.com/pupster90/welcome_to_io.git
 rm -rf ~/work ~/1_0_0.sh
 
 # Function called when Docker is built:
+cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password
 cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Set_Password.py
-Password () {
-   cd ~/ && python Set_Password.py "$1"
-   rm -rf Set_Password.py
-   start-notebook.sh
-}
+#Password () {
+#   cd ~/ && python Set_Password.py "$1"
+#   rm -rf Set_Password.py
+#   start-notebook.sh
+#}
 
 
 
