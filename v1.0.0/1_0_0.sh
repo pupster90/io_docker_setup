@@ -26,7 +26,6 @@ pip install PyGithub
 pip install timeago
 
 # Setup hidden files
-cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Set_Password.py
 mkdir ~/.js_files && cd ~/.js_files && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/cytoscape.min.js
 mkdir ~/.jupyter/custom && cd ~/.jupyter/custom && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/custom.js
 
@@ -37,14 +36,16 @@ echo "c.NotebookApp.keyfile =  u'/home/jovyan/.jupyter/mykey.key'"  >> ~/.jupyte
 echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" > ~/.jupyter/jupyter_notebook_config.py
 
+# Load in welcome_to_io
+cd ~ && git clone https://github.com/pupster90/welcome_to_io.git
+
 # Clean up
-rm -rf ~/work ~/setup_docker.sh
-
-
+rm -rf ~/work ~/1_0_0.sh
 
 # Function called when Docker is built:
+cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Set_Password.py
 Password () {
-   cd ~/ && python Set_Password.py $1
+   cd ~/ && python Set_Password.py "$1"
    rm -rf Set_Password.py
    start-notebook.sh
 }
