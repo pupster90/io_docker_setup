@@ -38,6 +38,7 @@ echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyt
 echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
 # *NOTE: Delete line below in later versions
 echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
+echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
 
 # Load in welcome_to_io
 cd ~ && git clone https://github.com/pupster90/welcome_to_io.git
