@@ -30,9 +30,9 @@ mkdir ~/.js_files && cd ~/.js_files && curl -O https://raw.githubusercontent.com
 mkdir ~/.jupyter/custom && cd ~/.jupyter/custom && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/custom.js
 
 # Setup Jupyter config file
-cd ~/.jupyter && openssl req -x509 -batch  -nodes -days 999 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
-echo "c.NotebookApp.certfile = u'/home/jovyan/.jupyter/mycert.pem'" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.keyfile =  u'/home/jovyan/.jupyter/mykey.key'"  >> ~/.jupyter/jupyter_notebook_config.py
+#cd ~/.jupyter && openssl req -x509 -batch  -nodes -days 999 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+#echo "c.NotebookApp.certfile = u'/home/jovyan/.jupyter/mycert.pem'" >> ~/.jupyter/jupyter_notebook_config.py
+#echo "c.NotebookApp.keyfile =  u'/home/jovyan/.jupyter/mykey.key'"  >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" > ~/.jupyter/jupyter_notebook_config.py
 
@@ -43,8 +43,8 @@ cd ~ && git clone https://github.com/pupster90/welcome_to_io.git
 rm -rf ~/work ~/1_0_0.sh
 
 # Function called when Docker is built:
-cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password
-cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Set_Password.py
+#cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password && chmod +x Password
+#cd ~/ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Set_Password.py
 #Password () {
 #   cd ~/ && python Set_Password.py "$1"
 #   rm -rf Set_Password.py
