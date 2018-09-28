@@ -35,7 +35,7 @@ mkdir ~/.jupyter/custom && cd ~/.jupyter/custom && curl -O https://raw.githubuse
 #echo "c.NotebookApp.keyfile =  u'/home/jovyan/.jupyter/mykey.key'"  >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.ip = '*'" > ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
-#echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
+echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
 # *NOTE: Delete line below in later versions
 echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
 
