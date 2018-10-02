@@ -4,6 +4,11 @@ requirejs.config({ paths: {
   cytoscape: 'cytoscape.min'
 } });
 
+// Make Scrolling Work on Ipad 
+var style = document.createElement("style"); 
+style.innerHTML = "body {-webkit-overflow-scrolling: touch;}"
+document.getElementsByTagName("body")[0].appendChild(style)
+
 // Change Text Editor View 
 if( document.getElementById("texteditor-container") != null ){
     document.getElementById("texteditor-container").className = "container-fluid"
@@ -19,9 +24,23 @@ if( document.getElementById("terminado-container") != null ){
     document.getElementsByClassName("terminado-container-container")[0].style.padding = "0px"
 }
 
-// Make Scrolling Work on Ipad 
-var style = document.createElement("style"); 
-style.innerHTML = "body {-webkit-overflow-scrolling: touch;}"
-document.getElementsByTagName("body")[0].appendChild(style)
-
+// create "web view" button for notebooks
+if( $(IPython.toolbar.selector.concat(' > #web-view')).length == 0 ){
+  IPython.toolbar.add_buttons_group([
+        {    'label'   : ' Web',
+             'icon'    : 'fa fa-lg fa-id-card-o',
+             'callback': function(){
+                 IPython.notebook.execute_all_cells();
+                 Jupyter.actions.call("collapsible_headings:collapse_all_headings")
+                 Jupyter.actions.call("hide_header:toggle")
+                 // hide code cells, if they are there
+                 if( document.getElementById("toggle_codecells").getElementsByClassName("fa fa-eye").length == 1 ){
+                     document.getElementById("toggle_codecells").click();
+                     }
+             }
+        }
+    ], 'web-view');
+    // makes it look pretty
+    document.getElementById("web-view").getElementsByClassName("btn btn-default")[0].className="btn btn-lg btn-success"
+} 
 
