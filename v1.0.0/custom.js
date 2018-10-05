@@ -57,7 +57,8 @@ if($(IPython.toolbar.selector.concat(' > #clean-view')).length == 0){
                  if( document.getElementById("toggle_codecells").getElementsByClassName("fa fa-eye-slash").length == 1 ){
                      document.getElementById("toggle_codecells").click();
                      }
-                 Jupyter.notebook.save_checkpoint()
+                 Jupyter.actions.call("widgets:save-clear-widgets");
+                 Jupyter.notebook.save_checkpoint();
                  }
         }
     ], 'clean-view');
