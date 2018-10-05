@@ -44,3 +44,27 @@ if( $(IPython.toolbar.selector.concat(' > #web-view')).length == 0 ){
     document.getElementById("web-view").getElementsByClassName("btn btn-default")[0].className="btn btn-lg btn-success"
 } 
 
+// Create "Clean Up" Button for notebooks
+if($(IPython.toolbar.selector.concat(' > #clean-view')).length == 0){
+  IPython.toolbar.add_buttons_group([
+        {    'label'   : ' ',
+             'icon'    : 'fa fa-lg fa-bolt',
+             'callback': function(){
+                 Jupyter.notebook.clear_all_output()
+                 Jupyter.actions.call("collapsible_headings:uncollapse_all_headings")
+                 //document.getElementById("header").style.display = "block"; //NO NEEDED, if they see the header
+                 // show code cells, if they are hidden
+                 if( document.getElementById("toggle_codecells").getElementsByClassName("fa fa-eye-slash").length == 1 ){
+                     document.getElementById("toggle_codecells").click();
+                     }
+                 Jupyter.notebook.save_checkpoint()
+                 }
+        }
+    ], 'clean-view');
+    // makes it look pretty
+    document.getElementById("clean-view").getElementsByClassName("btn btn-default")[0].className="btn btn-danger"
+} 
+
+
+
+
