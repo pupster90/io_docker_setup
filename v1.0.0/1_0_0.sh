@@ -41,7 +41,7 @@ echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
 
 # Load in welcome_to_io
-cd ~ && git clone https://github.com/pupster90/welcome_to_io.git
+cd ~ && git clone https://github.com/pupster90/Welcome_to_io.git
 
 # Clean up
 rm -rf ~/work ~/1_0_0.sh
