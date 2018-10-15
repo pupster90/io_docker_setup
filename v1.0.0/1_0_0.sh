@@ -42,7 +42,9 @@ echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py
 
 # Setup Password
 cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/.Set_Password.py
-cd /usr/local/bin && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password && chmod +x Password
+#cd /usr/local/bin && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password && chmod +x Password
+cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/.password && chmod +x .password
+
 #function Password(){
 #        cd ~/.jupyter && openssl req -x509 -batch  -nodes -days 999 -newkey rsa:2048 -keyout mykey.key -out mycert.pem;
 #        echo "c.NotebookApp.certfile = u'/home/jovyan/.jupyter/mycert.pem'" >> ~/.jupyter/jupyter_notebook_config.py;
