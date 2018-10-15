@@ -42,9 +42,9 @@ echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py
 
 # Setup Password
 cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/.Set_Password.py
-#cd /usr/local/bin && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password && chmod +x Password
-cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/.password && chmod +x .password
-echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
+cd /usr/local/bin && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/Password && chmod +x Password
+#cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/v1.0.0/.password && chmod +x .password
+#echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
 
 
 #function Password(){
