@@ -21,7 +21,8 @@ if( document.getElementById("texteditor-container") != null ){
 if( document.getElementById("terminado-container") != null ){
     document.getElementById("terminado-container").className = "container-fluid"
     document.getElementById("header-container").className = "container-fluid"
-    //document.getElementsByClassName("terminado-container-container")[0].style.padding = "0px"
+    document.getElementsByClassName("terminado-container-container")[0].style.paddingTop = "0px"
+    document.getElementsByClassName("terminado-container-container")[0].style.paddingBottom = "25px"
 }
 
 // create "web view" button for notebooks
