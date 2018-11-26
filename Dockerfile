@@ -1,7 +1,7 @@
 # This is the docker file used to create the io computer
 # This file is mostly empty because most of the ahrd work is done inside the Set_Computer.sh file
 
-FROM jupyter/datascience-notebook:e8613d84128b
+FROM jupyter/datascience-notebook:14fdfbf9cfc1
 USER root
 WORKDIR /home/jovyan
 
@@ -10,7 +10,6 @@ RUN chmod +x Set_Computer.sh && ./Set_Computer.sh
 
 EXPOSE 80
 CMD ["jupyter","notebook"]
-
 
 
 

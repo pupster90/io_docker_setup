@@ -36,14 +36,14 @@ mkdir ~/.js_files && cd ~/.js_files && curl -O https://raw.githubusercontent.com
 mkdir ~/.jupyter/custom && cd ~/.jupyter/custom && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/custom.js
 
 # Setup Jupyter config file
-echo "c.NotebookApp.ip = '*'" > ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
 
 # Setup Password
-cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/.Set_Password.py
+cd ~ && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/Set_Password.py .Set_Password.py
 cd /usr/local/bin && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/Password && chmod +x Password
 cd /usr/local/bin && curl -O https://raw.githubusercontent.com/pupster90/io_docker_setup/master/password && chmod +x password
 
