@@ -56,7 +56,10 @@ cd ~ && git clone https://github.com/pupster90/Welcome_to_io.git
 ### Install Languages ###
 ########################
 
-# DO THIS
+### Install  scijava: Groovy, Python, BeanShell, Clojure, JavaScript, Scala
+conda install -y scijava-jupyter-kernel
+
+
 
 
 #################
