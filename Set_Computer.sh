@@ -109,7 +109,7 @@ python2 -m pip install matplotlib
 ##########################
 
 # Create user's starting Apps & Files by downloading everything from github
-cd && mkdir Apps Downloads Private Public       #<-- Create folders
+cd ~ && mkdir Apps Downloads Private Public       #<-- Create folders
 cd ~/Apps && git clone https://github.com/pupster90/Cytoscape.git
 cd ~/Apps && git clone https://github.com/pupster90/io_View.git
 cd ~/Apps && git clone https://github.com/pupster90/io_Online.git
