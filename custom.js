@@ -1,13 +1,16 @@
 
-// Load in Cytcoscape: There should be a better way to do this!
-requirejs.config({ paths: {
-  cytoscape: 'cytoscape.min'
-} });
-
 // Make Scrolling Work on Ipad 
 var style = document.createElement("style"); 
 style.innerHTML = "body {-webkit-overflow-scrolling: touch;}"
 document.getElementsByTagName("body")[0].appendChild(style)
+
+
+// Change Main Page View
+if( document.getElementById("tab_content") != null ){
+    var logo = document.getElementById("ipython_notebook");
+    logo.innerHTML += '<font size="5" face="Georgia" color="magenta">&nbsp; &nbsp; io</font>';
+    logo.innerHTML += '<font size="3" color="gray"><sub>v3.0.0</sub></font>';
+}
 
 // Change Text Editor View 
 if( document.getElementById("texteditor-container") != null ){
@@ -22,6 +25,97 @@ if( document.getElementById("terminado-container") != null ){
     document.getElementById("terminado-container").className = "container-fluid"
     document.getElementById("header").style.display = "none"
 }
+
+// Change Notebook View
+if( document.getElementById("notebook-container") != null ){
+    // *** Add Keyboard Commands for iPad ***
+    // Movement between Cells
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('-', 'jupyter-notebook:select-previous-cell');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('=', 'jupyter-notebook:select-next-cell');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('shift--', 'jupyter-notebook:extend-selection-above');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('shift-=', 'jupyter-notebook:extend-selection-below');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('Ctrl-Shift--', 'jupyter-notebook:move-cell-up');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('Ctrl-Shift-=', 'jupyter-notebook:move-cell-down');
+    // Controls Collapssing
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut(']', 'collapsible_headings:uncollapse_heading');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('[', 'collapsible_headings:collapse_heading');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('shift-]', 'collapsible_headings:uncollapse_all_headings');
+    Jupyter.keyboard_manager.command_shortcuts.add_shortcut('shift-[', 'collapsible_headings:collapse_all_headings');
+    // SKETCHY ONE // Entre command mode
+    Jupyter.keyboard_manager.edit_shortcuts.add_shortcut('shift-backspace', 'jupyter-notebook:enter-command-mode');
+    
+    
+    // *** Change the Style of the notebook ***
+    // Code is copied from here: https://stackoverflow.com/questions/524696/how-to-create-a-style-tag-with-javascript
+    var head = document.head || document.getElementsByTagName('head')[0]
+    var style_notebook = document.createElement('style'); //<-- Where we write all of hte <style> changes
+    var css = "\
+            /* Remove Enormous Margins */ \
+            *{margin:0; padding:0;} html, body, \
+                 .container{margin:0;!important padding:0;!important} \
+                 .container { width:100% !important;}  \
+            \
+            /* Customize text cells */ \
+            div.text_cell.rendered {  \
+                font-size:1.1em; \
+                line-height:1.4em; \
+            } \
+            \
+            /* Make Container Background white */ \
+            #notebook-container { \
+                box-shadow: 0px 0px 0px 0px rgba(87, 87, 87, 0.2); \
+            } \
+            div#notebook { \
+                background-color: White; \
+            } \
+            .end_space { \
+                background-color: White; \
+            } \
+            \
+            /* We make the little box to the left of the cell as small as possible */ \
+            .input_prompt { \
+                margin:0; \
+                padding:0; \
+                min-width: 0ex; \
+                font-size:.7em; \
+            } \
+            .prompt { \
+                min-width: 2vw; \
+            } \
+            div.input_prompt bdi { \
+                display: none; \
+            } \
+            div.input_prompt i { \
+                font-size: 2em; \
+                opacity: 0.7; \
+            } \
+            div.output_subarea { /* Makes html output width larger */ \
+                max-width: 100% \
+            } \
+            \
+            /* make display(HTML()) not take up any space when ran for styles and javascript */ \
+            div.output_subarea { \
+                padding: 0; \
+            } \
+            div.run_this_cell{ \
+                padding: 0; \
+            } \
+            /* make run icons bigger */ \
+            div.run_this_cell i { \
+                font-size: 2em; \
+                opacity: 0.7; \
+            } \
+        "
+    style_notebook.type = 'text/css';
+    if (style_notebook.styleSheet){
+      
+      style_notebook.styleSheet.cssText = css; //<-- This is required for IE8 and below.
+    } else {
+      style_notebook.appendChild(document.createTextNode(css));
+    }
+    head.appendChild(style_notebook);
+}
+
 
 // create "web view" button for notebooks
 if( $(IPython.toolbar.selector.concat(' > #web-view')).length == 0 ){
@@ -66,5 +160,9 @@ if($(IPython.toolbar.selector.concat(' > #clean-view')).length == 0){
 } 
 
 
+// Load in Cytcoscape: There should be a better way to do this!
+requirejs.config({ paths: {
+  cytoscape: 'cytoscape.min'
+} });
 
 
