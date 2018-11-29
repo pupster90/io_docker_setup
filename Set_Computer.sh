@@ -58,7 +58,7 @@ mv ~/io_docker_setup/password /usr/local/bin
 mv ~/io_docker_setup/Password /usr/local/bin
 
 # Load in welcome_to_io
-cd ~ && git clone https://github.com/pupster90/Welcome_to_io.git
+#cd ~ && git clone https://github.com/pupster90/Welcome_to_io.git
 
 
 
@@ -101,6 +101,23 @@ python2 -m ipykernel install --user
 python2 -m pip install pandas
 python2 -m pip install scipy
 python2 -m pip install matplotlib
+
+
+
+############################
+### Add Folders & Files ###
+##########################
+
+# Create user's starting Apps & Files by downloading everything from github
+!cd && mkdir Apps Downloads Private Public       #<-- Create folders
+!cd ~/Apps && git clone https://github.com/pupster90/Cytoscape.git
+!cd ~/Apps && git clone https://github.com/pupster90/io_View.git
+!cd ~/Apps && git clone https://github.com/pupster90/io_Online.git
+!cd ~/Apps && git clone https://github.com/pupster90/io_Blog.git
+!cd ~/Public && git clone https://github.com/pupster90/Public_Profile.git
+!cd ~/Public && git clone https://github.com/pupster90/My_First_Research_Paper.git
+!cd ~/Public && git clone https://github.com/pupster90/io_Presentation.git
+
 
 
 #################
