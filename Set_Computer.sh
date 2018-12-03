@@ -10,7 +10,7 @@ apt update
 apt-get install update
 
 # Install telnet for redis
-apt-get install -y telnet
+#apt-get install -y telnet
 
 # Install java
 apt-get install -y openjdk-11-jdk
