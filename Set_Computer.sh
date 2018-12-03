@@ -39,6 +39,8 @@ jupyter nbextension enable tree-filter/index
 pip install ndex2-performance
 pip install PyGithub
 pip install timeago
+pip install --upgrade google-cloud-datastore
+pip install redis
 
 # Setup hidden files
 mkdir ~/.js_files && mv ~/io_docker_setup/cytoscape.min.js ~/.js_files
