@@ -9,6 +9,9 @@
 apt update
 apt-get install update
 
+# Install telnet for redis
+apt-get install telnet
+
 # Install java
 apt-get install -y openjdk-11-jdk
 echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> ~/.bashrc 
