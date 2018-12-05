@@ -78,9 +78,10 @@ if( document.getElementById("notebook-container") != null ){
                 padding:0; \
                 min-width: 0ex; \
                 font-size:.7em; \
+                text-align: left; \
             } \
-            .prompt { \
-                min-width: 2vw; \
+            div.prompt { \
+                min-width: 10ex; \
             } \
             div.input_prompt bdi { \
                 display: none; \
@@ -99,6 +100,9 @@ if( document.getElementById("notebook-container") != null ){
             } \
             div.run_this_cell{ \
                 padding: 0; \
+                display: visible; \
+                mind-width: 1.5ch; \
+                text-algin: left; \
             } \
             /* make run icons bigger */ \
             div.run_this_cell i { \
