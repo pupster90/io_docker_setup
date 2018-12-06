@@ -65,10 +65,10 @@ if( document.getElementById("notebook-container") != null ){
             \
             /* We make the little box to the left of the cell as small as possible */ \
 	    .prompt { min-width: 5ch; } \
-            .input_prompt { margin:0; padding:0; font-size:.7em; min-width: 3ch; text-align: left; } \
+            .input_prompt { margin:0; padding:0; font-size:.7em; min-width: 2vw; text-align: left; } \
             .input_prompt bdi { display: none; padding: 0; } \
             .input_prompt i { font-size: 2em; opacity: 0.7; } \
-            .run_this_cell{ padding: 0; display: visible; mind-width: 1.5ch;  text-algin: left; } \
+            .run_this_cell{ padding: 0; display: visible; mind-width: 1vw;  text-algin: left; } \
 	    \
             /* make run icons bigger */ \
             .run_this_cell i { display: visible; font-size: 2em; opacity: 0.7; } \
