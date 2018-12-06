@@ -54,61 +54,6 @@ if( document.getElementById("notebook-container") != null ){
             *{margin:0; padding:0;} html, body, \
                  .container{margin:0;!important padding:0;!important} \
                  .container { width:100% !important;}  \
-            \
-            /* Customize text cells */ \
-            div.text_cell.rendered {  \
-                font-size:1.1em; \
-                line-height:1.4em; \
-            } \
-            \
-            /* Make Container Background white */ \
-            #notebook-container { \
-                box-shadow: 0px 0px 0px 0px rgba(87, 87, 87, 0.2); \
-            } \
-            div#notebook { \
-                background-color: White; \
-            } \
-            .end_space { \
-                background-color: White; \
-            } \
-            \
-            /* We make the little box to the left of the cell as small as possible */ \
-            .input_prompt { \
-                margin:0; \
-                padding:0; \
-                min-width: 0ex; \
-                font-size:.7em; \
-                text-align: left; \
-            } \
-            div.prompt { \
-                min-width: 10ex; \
-            } \
-            div.input_prompt bdi { \
-                display: none; \
-            } \
-            div.input_prompt i { \
-                font-size: 2em; \
-                opacity: 0.7; \
-            } \
-            div.output_subarea { /* Makes html output width larger */ \
-                max-width: 100% \
-            } \
-            \
-            /* make display(HTML()) not take up any space when ran for styles and javascript */ \
-            div.output_subarea { \
-                padding: 0; \
-            } \
-            .run_this_cell{ \
-                padding: 0; \
-                display: visible; \
-                mind-width: 1.5ch; \
-                text-algin: left; \
-            } \
-            /* make run icons bigger */ \
-            div.run_this_cell i { \
-                font-size: 2em; \
-                opacity: 0.7; \
-            } \
         "
     style_notebook.type = 'text/css';
     if (style_notebook.styleSheet){
