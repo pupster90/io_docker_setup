@@ -98,7 +98,7 @@ if( document.getElementById("notebook-container") != null ){
             div.output_subarea { \
                 padding: 0; \
             } \
-            div.run_this_cell{ \
+            .run_this_cell{ \
                 padding: 0; \
                 display: visible; \
                 mind-width: 1.5ch; \
