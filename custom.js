@@ -54,6 +54,12 @@ if( document.getElementById("notebook-container") != null ){
             *{margin:0; padding:0;} html, body, \
                  .container{margin:0;!important padding:0;!important} \
                  .container { width:100% !important;}  \
+            \
+            /* Make Container Background white */ \
+            #notebook-container { box-shadow: 0px 0px 0px 0px rgba(87, 87, 87, 0.2); } \
+            div#notebook { background-color: White; } \
+            .end_space { background-color: White; } \
+            \
         "
     style_notebook.type = 'text/css';
     if (style_notebook.styleSheet){
