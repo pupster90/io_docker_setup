@@ -63,6 +63,12 @@ if( document.getElementById("notebook-container") != null ){
             /* Customize text cells */ \
             div.text_cell.rendered { font-size:1.1em; line-height:1.4em; } \
             \
+            /* We make the little box to the left of the cell as small as possible */ \
+	        .prompt { min-width: 10ex; } \
+            .input_prompt { margin:0; padding:0; min-width: 0ex; font-size:.7em; text-align: left; } \
+            .input_prompt bdi { display: none; } \
+            .input_prompt i { font-size: 2em; opacity: 0.7; } \
+            .run_this_cell{ padding: 0; display: visible; mind-width: 1.5ch;  text-algin: left; } \
         "
     style_notebook.type = 'text/css';
     if (style_notebook.styleSheet){
