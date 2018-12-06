@@ -64,15 +64,15 @@ if( document.getElementById("notebook-container") != null ){
             div.text_cell.rendered { font-size:1.1em; line-height:1.4em; } \
             \
             /* We make the little box to the left of the cell as small as possible */ \
-	    .prompt { max-width: 10ex; } \
-	    .prompt_container { max-width: 10ex } \
-            .input_prompt { margin:0; padding:0; font-size:.7em; max-width: 4ch; text-align: left; } \
+	    .prompt { max-width: 9ex; } \
+	    .prompt_container { max-width: 9ex } \
+            .input_prompt { margin:0; padding:0; font-size:.7em; max-width: 3ch; text-align: left; } \
             .input_prompt bdi { display: none; padding: 0; } \
             .input_prompt i { font-size: 2em; opacity: 0.7; } \
-            .run_this_cell{ padding: 0; display: visible; max-width: 3ch;  text-algin: left; } \
+            .run_this_cell{ padding: 0; display: visible; max-width: 2ch;  text-algin: left; } \
 	    \
             /* make run icons bigger */ \
-            .run_this_cell i { display: visible; font-size: 2em; opacity: 0.7; } \
+            .run_this_cell i { display: visible; font-size: 1.5em; max-width: 2ch; opacity: 0.7; } \
 	    \
             /* Makes html output width larger and remove padding */ \
             div.output_subarea { max-width: 100%; padding: 0; } \
