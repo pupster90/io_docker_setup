@@ -72,7 +72,7 @@ if( document.getElementById("notebook-container") != null ){
             .run_this_cell{ padding: 0; display: none; max-width: 2ch;  text-align: left; } \
 	    \
             /* make run icons bigger */ \
-            .run_this_cell i { display: visible; font-size: 1.5em; max-width: 2ch; opacity: 0.7; text-align: left; } \
+            .run_this_cell i { display: none; font-size: 1.5em; max-width: 2ch; opacity: 0.7; text-align: left; } \
 	    \
             /* Makes html output width larger and remove padding */ \
             div.output_subarea { max-width: 100%; padding: 0; } \
