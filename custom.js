@@ -60,6 +60,9 @@ if( document.getElementById("notebook-container") != null ){
             div#notebook { background-color: White; } \
             .end_space { background-color: White; } \
             \
+            /* Customize text cells */ \
+            div.text_cell.rendered { font-size:1.1em; line-height:1.4em; } \
+            \
         "
     style_notebook.type = 'text/css';
     if (style_notebook.styleSheet){
