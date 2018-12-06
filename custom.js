@@ -64,7 +64,7 @@ if( document.getElementById("notebook-container") != null ){
             div.text_cell.rendered { font-size:1.1em; line-height:1.4em; } \
             \
             /* We make the little box to the left of the cell as small as possible */ \
-	    .prompt { min-width: 5ch; } \
+	    .prompt { min-width: 3vw; } \
             .input_prompt { margin:0; padding:0; font-size:.7em; min-width: 2vw; text-align: left; } \
             .input_prompt bdi { display: none; padding: 0; } \
             .input_prompt i { font-size: 2em; opacity: 0.7; } \
