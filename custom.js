@@ -69,7 +69,7 @@ if( document.getElementById("notebook-container") != null ){
             .input_prompt { margin:0; padding:0; font-size:.7em; max-width: 3ch; text-align: left; } \
             .input_prompt bdi { display: none; padding: 0; } \
             .input_prompt i { font-size: 2em; opacity: 0.7; text-align: left; } \
-            .run_this_cell{ padding: 0; display: visible; max-width: 2ch;  text-align: left; } \
+            .run_this_cell{ padding: 0; display: none; max-width: 2ch;  text-align: left; } \
 	    \
             /* make run icons bigger */ \
             .run_this_cell i { display: visible; font-size: 1.5em; max-width: 2ch; opacity: 0.7; text-align: left; } \
