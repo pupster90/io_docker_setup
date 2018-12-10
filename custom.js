@@ -9,7 +9,7 @@ document.getElementsByTagName("body")[0].appendChild(style)
 if( document.getElementById("tab_content") != null ){
     var logo = document.getElementById("ipython_notebook");
     logo.innerHTML += '<font size="5" face="Georgia" color="magenta">&nbsp; &nbsp; io</font>';
-    logo.innerHTML += '<font size="3" color="gray"><sub>v3.0.0</sub></font>';
+    logo.innerHTML += '<font size="3" color="gray"><sub>{VERSION_NAME}</sub></font>';
 }
 
 // Change Text Editor View 
