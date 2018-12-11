@@ -45,6 +45,7 @@ pip install ndex2-performance
 pip install PyGithub
 pip install timeago
 pip install --upgrade google-cloud-datastore
+pip install --upgrade firebase-admin
 pip install redis
 
 # Setup hidden files
