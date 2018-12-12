@@ -19,7 +19,7 @@ apt-get install -y openjdk-11-jdk
 echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> ~/.bashrc 
 JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
-# Install nb-extensiosn
+# Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
 conda install -y -c conda-forge jupyter_contrib_nbextensions
 
