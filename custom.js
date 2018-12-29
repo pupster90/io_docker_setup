@@ -24,6 +24,7 @@ if( document.getElementById("texteditor-container") != null ){
 if( document.getElementById("terminado-container") != null ){
     document.getElementById("terminado-container").className = "container-fluid"
     document.getElementById("header").style.display = "none"
+    document.getElementsByClassName("terminado-container-container")[0].style.paddingTop = "0px"
 }
 
 // Change Notebook View
