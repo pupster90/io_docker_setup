@@ -1,4 +1,4 @@
-VERSION_NAME=v3.0.2
+VERSION_NAME=v3.0.3
 
 # Set io's Version name in custom.js file
 sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/io_docker_setup/custom.js
