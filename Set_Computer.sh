@@ -59,6 +59,7 @@ echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyt
 echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
 echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
+echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
 
 # Setup Password
 mv ~/io_docker_setup/Set_Password.py ~/.Set_Password.py
