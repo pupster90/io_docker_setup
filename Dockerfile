@@ -1,7 +1,7 @@
 # This is the docker file used to create the io computer
 # This file is mostly empty because most of the hard work is done inside the Set_Computer.sh file
 
-FROM jupyter/datascience-notebook:14fdfbf9cfc1
+FROM jupyter/datascience-notebook:f646d2b2a3af
 USER root
 WORKDIR /home/jovyan
 
