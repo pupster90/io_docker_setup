@@ -7,9 +7,18 @@ sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/io_docker_setup/custom.js
 ### Basic Setup ###
 ##################
 
+# Setup Jupyter config file
+echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
+echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
+echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
+echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
+
 # Generic Software Update
 apt update
 apt-get install update
+conda update -y conda
 
 # Install telnet for redis
 #apt-get install -y telnet
@@ -52,14 +61,6 @@ pip install redis
 # Setup hidden files
 mkdir ~/.js_files && mv ~/io_docker_setup/cytoscape.min.js ~/.js_files
 mkdir ~/.jupyter/custom && mv ~/io_docker_setup/custom.js ~/.jupyter/custom 
-
-# Setup Jupyter config file
-echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.port = 80" >> ~/.jupyter/jupyter_notebook_config.py  
-echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py  
-echo "c.NotebookApp.allow_root = True" >> ~/.jupyter/jupyter_notebook_config.py  
-echo "c.NotebookApp.allow_origin = '*'" >> ~/.jupyter/jupyter_notebook_config.py  
 
 # Setup Password
 mv ~/io_docker_setup/Set_Password.py ~/.Set_Password.py
