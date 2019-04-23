@@ -7,9 +7,6 @@ sed -i "s/{VERSION_NAME}/$VERSION_NAME/g"  ~/io_docker_setup/custom.js
 ### Basic Setup ###
 ##################
 
-# Install this for R V8 package
-sudo apt-get install -y libv8-dev
-
 # Setup Jupyter config file
 echo "c.NotebookApp.ip = '0.0.0.0'" > ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.extra_static_paths = ['/home/jovyan/.js_files']" >> ~/.jupyter/jupyter_notebook_config.py
@@ -30,6 +27,10 @@ conda update -y conda
 apt-get install -y openjdk-11-jdk
 echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> ~/.bashrc 
 JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
+
+# Set Up R Packages
+sudo apt-get install -y libv8-dev
+Rscript ~/io_docker_setup/Install_Packages.R
 
 # Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
