@@ -31,6 +31,11 @@ JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 # Set Up R Packages
 sudo apt-get install -y libv8-dev
 Rscript ~/io_docker_setup/Install_Packages.R
+# For installing devtools package
+sudo apt-get update
+sudo apt-get -y install libcurl4-openssl-dev
+sudo apt-get -y install libssl-dev
+
 
 # Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
