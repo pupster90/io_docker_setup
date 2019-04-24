@@ -34,11 +34,12 @@ Rscript ~/io_docker_setup/Install_Packages.R
 # For installing devtools package
 sudo apt-get update
 apt-get install -y libhdf5-dev libcurl4-openssl-dev libssl-dev
-# For installing Seurat
+# For installing Seurat: https://github.com/satijalab/seurat/issues/1183
 echo "DEBIAN_FRONTEND=noninteractive" >> ~/.bashrc 
 echo "DEBCONF_NONINTERACTIVE_SEEN=true" >> ~/.bashrc 
 echo 'tzdata tzdata/Areas select US' | debconf-set-selections
 echo 'tzdata tzdata/Zones/US select New York' | debconf-set-selections
+apt-get install -y ca-certificates gnupg2
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
