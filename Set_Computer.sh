@@ -33,8 +33,7 @@ sudo apt-get install -y libv8-dev
 Rscript ~/io_docker_setup/Install_Packages.R
 # For installing devtools package
 sudo apt-get update
-sudo apt-get -y install libcurl4-openssl-dev
-sudo apt-get -y install libssl-dev
+apt-get install -y libhdf5-dev libcurl4-openssl-dev libssl-dev
 
 
 # Install nb-extensiosn and GenePattern notebook
