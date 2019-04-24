@@ -43,6 +43,9 @@ apt-get install -y ca-certificates gnupg2
 echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" | tee --append /etc/apt/sources.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 apt-get update
+# Install packages
+R --slave --no-restore --no-save -e "install.packages('Seurat', repos='https://cloud.r-project.org')"
+
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
