@@ -37,6 +37,8 @@ apt-get install -y libhdf5-dev libcurl4-openssl-dev libssl-dev
 # For installing Seurat
 echo "DEBIAN_FRONTEND=noninteractive" >> ~/.bashrc 
 echo "DEBCONF_NONINTERACTIVE_SEEN=true" >> ~/.bashrc 
+echo 'tzdata tzdata/Areas select US' | debconf-set-selections
+echo 'tzdata tzdata/Zones/US select New York' | debconf-set-selections
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
