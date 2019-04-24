@@ -40,6 +40,9 @@ echo "DEBCONF_NONINTERACTIVE_SEEN=true" >> ~/.bashrc
 echo 'tzdata tzdata/Areas select US' | debconf-set-selections
 echo 'tzdata tzdata/Zones/US select New York' | debconf-set-selections
 apt-get install -y ca-certificates gnupg2
+echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" | tee --append /etc/apt/sources.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+apt-get update
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
