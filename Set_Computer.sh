@@ -29,6 +29,7 @@ echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> ~/.bashrc
 JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
 ### Set Up R Packages
+conda install -y  -c conda-forge r-juniperkernel #install Juniper Kernel
 sudo apt-get install -y libv8-dev
 Rscript ~/io_docker_setup/Install_Packages.R
 # For installing devtools package
