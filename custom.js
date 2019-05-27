@@ -78,6 +78,7 @@ if( document.getElementById("notebook-container") != null ){
 	    \
             /* Makes html output width larger and remove padding */ \
             div.output_subarea { max-width: 100%; padding: 0; } \
+            div.run_this_cell{ padding:0; } \
         "
     style_notebook.type = 'text/css';
     if (style_notebook.styleSheet){
