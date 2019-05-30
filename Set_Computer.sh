@@ -80,6 +80,8 @@ pip install timeago
 pip install --upgrade google-cloud-datastore
 pip install --upgrade firebase-admin
 pip install redis
+pip install tensorflow==2.0.0-alpha0 
+pip install keras																									
 
 # Setup hidden files
 mkdir ~/.js_files && mv ~/io_docker_setup/cytoscape.min.js ~/.js_files
