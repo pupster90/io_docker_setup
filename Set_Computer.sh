@@ -31,7 +31,14 @@ JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 ### Set Up R Packages
 conda install -y  -c conda-forge r-juniperkernel #install Juniper Kernel
 sudo apt-get install -y libv8-dev
-Rscript ~/io_docker_setup/Install_Packages.R
+# These lines installs all the R packages added to io
+R --slave --no-restore --no-save -e "install.packages('shinythemes', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('V8', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('shinyjs', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('plotly', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('ggthemes', repos = 'http://cran.us.r-project.org')"
 # For installing devtools package
 sudo apt-get update
 apt-get install -y libhdf5-dev libcurl4-openssl-dev libssl-dev
