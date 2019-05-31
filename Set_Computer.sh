@@ -127,7 +127,7 @@ conda install -y xeus-cling notebook -c QuantStack -c conda-forge
 #apt-get update
 #apt update
 apt-get install -y nodejs
-apt-get install -y npm
+#apt-get install -y npm # <-- Package didn't install correctly
 apt-get install -y libzmq3-dev
 apt-get install -y pkg-config
 # Command didn't work: ln -s "$(which nodejs)" /usr/bin/node  #<-- this creates a symlink
