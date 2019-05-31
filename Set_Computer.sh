@@ -28,7 +28,9 @@ apt-get install -y openjdk-11-jdk
 echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> ~/.bashrc 
 JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
-### Set Up R Packages
+###########################
+# . Set Up R Packages . ###
+###########################
 conda install -y  -c conda-forge r-juniperkernel #install Juniper Kernel
 sudo apt-get install -y libv8-dev
 # These lines installs all the R packages added to io
@@ -54,9 +56,14 @@ apt-get update
 # For installing SingleR
 ln -s /bin/gzip /usr/bin/gzip
 ln -s /bin/tar /bin/gtar
-# Install packages
+# Install Seurat
 R --slave --no-restore --no-save -e "install.packages('Seurat', repos='https://cloud.r-project.org')"
+# Install Singler
+R --slave --no-restore --no-save -e "devtools::install_github('dviraran/SingleR')"
 
+#################################
+# .    Install Jupyter Stuff
+#################################
 
 ### Install nb-extensiosn and GenePattern notebook
 conda install -y -c damianavila82 rise
