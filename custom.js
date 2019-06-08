@@ -12,6 +12,14 @@ if( document.getElementById("tab_content") != null ){
     logo.innerHTML += '<font size="3" color="gray"><sub>{VERSION_NAME}</sub></font>';
 }
 
+
+// Change Password Login View
+if( document.getElementById("password_input") != null ){
+    var vid = document.createElement("div"); 
+    vid.innerHTML = "<div class='row'><div class='col-xs-12 col-md-offset-3 col-md-6'><div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/g4Yc0aY1Vz8'> </iframe></div></div></div>"
+    document.getElementById("ipython-main-app").appendChild(vid)
+}
+
 // Change Text Editor View 
 if( document.getElementById("texteditor-container") != null ){
     document.getElementById("texteditor-container").className = "container-fluid"
