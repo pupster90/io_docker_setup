@@ -43,6 +43,7 @@ R --slave --no-restore --no-save -e "install.packages('plotly', repos = 'http://
 R --slave --no-restore --no-save -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')"
 R --slave --no-restore --no-save -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
 R --slave --no-restore --no-save -e "install.packages('ggthemes', repos = 'http://cran.us.r-project.org')"
+R --slave --no-restore --no-save -e "install.packages('hash', repos = 'http://cran.us.r-project.org')"
 # For installing devtools package
 sudo apt-get update
 apt-get install -y libhdf5-dev libcurl4-openssl-dev libssl-dev
